@@ -34,7 +34,7 @@
 ;student
 [chara_new name="student" storage="./chara/k_student.png" jname="学生"]
 
-;@playbgm time="3000" storage="interview.ogg" loop="true"
+@playbgm time="3000" storage="interview.ogg" loop="true"
 
 [eval exp="point=0"]
 
@@ -42,7 +42,7 @@
 #dan
 次の方、どうぞ！[p]
 
-[chara_show name="student" left="0" top="320"]
+[chara_show name="student" left="0" effect="easeInQuad"]
 #student
 よろしくお願いします。[p]
 
@@ -75,7 +75,7 @@
 
 *Q1
 #dan
-では、問題です。[l]
+では、問題です。
 情報技術の略は何？
 
 #student
@@ -104,7 +104,7 @@
 
 *Q2
 #dan
-次のうち、プログラミング言語はどれ？
+次のうち、プログラミング言語はどれ？[p]
 
 #student
 [glink graphic="./button.png" width="160" height="48" x="260" y="100" text="英語"     target="*Q2_select1"]
@@ -132,9 +132,8 @@
 
 *Q3
 #dan
-インターネットのプロトコルは何？
+インターネットのプロトコルは何？[p]
 
-#student
 [glink graphic="./button.png" width="160" height="48" x="260" y="100" text="ＳＭＴＰ"     target="*Q3_select1"]
 [glink graphic="./button.png" width="160" height="48" x="260" y="170" text="ＴＣＰ／ＩＰ" target="*Q3_select2"]
 [glink graphic="./button.png" width="160" height="48" x="260" y="240" text="ＦＴＰ"       target="*Q3_select3"]
@@ -159,12 +158,10 @@
 
 
 *End
-#
-[cm]
 [fadeoutbgm]
 [chara_hide name="dan"]
 [chara_config talk_focus="none"]
-[chara_move name="student" time="300" width="640" left="240" top="0"]
+[chara_move name="student" time="300" width="640"]
 [position layer="message0" left="40" top="40" width="1200" height="240" page="fore" visible="true"]
 [font size=48]
 [if exp="point>50"]
