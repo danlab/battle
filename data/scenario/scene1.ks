@@ -1,4 +1,5 @@
 ;The・ゼミ面接！
+[title name="The・ゼミ面接！"]
 
 *start
 
